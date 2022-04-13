@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="script.js" defer></script>
+    <title>Matching Game</title>
+</head>
+<body>
+
+    <main>
+        <section class="status-container">
+            <div class="moves-container">Moves: <div class="moves">0</div></div>
+            <div class="timer-container">Timer: <div class="timer"></div></div>
+            <div class="reset-btn-container"><button class="reset-btn w3-btns">Start/Reset</button></div>
+        </section>
+
+        <section class="playboard-container">
+            <table id="playboard">
+                <tr>
+                    <td class="card hidden" id="1"></td>
+                    <td class="card hidden" id="2"></td>
+                    <td class="card hidden" id="3"></td>
+                    <td class="card hidden" id="4"></td>
+                    <td class="card hidden" id="5"></td>
+                    <td class="card hidden" id="6"></td>
+                    <td class="card hidden" id="7"></td>
+                    <td class="card hidden" id="8"></td>
+                </tr>
+                <tr>
+                    <td class="card hidden" id="9"></td>
+                    <td class="card hidden" id="10"></td>
+                    <td class="card hidden" id="11"></td>
+                    <td class="card hidden" id="12"></td>
+                    <td class="card hidden" id="13"></td>
+                    <td class="card hidden" id="14"></td>
+                    <td class="card hidden" id="15"></td>
+                    <td class="card hidden" id="16"></td>
+                </tr>
+                <tr>
+                    <td class="card hidden" id="17"></td>
+                    <td class="card hidden" id="18"></td>
+                    <td class="card hidden" id="19"></td>
+                    <td class="card hidden" id="20"></td>
+                    <td class="card hidden" id="21"></td>
+                    <td class="card hidden" id="22"></td>
+                    <td class="card hidden" id="23"></td>
+                    <td class="card hidden" id="24"></td>
+                </tr>
+                <tr>
+                    <td class="card hidden" id="25"></td>
+                    <td class="card hidden" id="26"></td>
+                    <td class="card hidden" id="27"></td>
+                    <td class="card hidden" id="28"></td>
+                    <td class="card hidden" id="29"></td>
+                    <td class="card hidden" id="30"></td>
+                    <td class="card hidden" id="31"></td>
+                    <td class="card hidden" id="32"></td>
+                </tr>
+                <tr>
+                    <td class="card hidden" id="33"></td>
+                    <td class="card hidden" id="34"></td>
+                    <td class="card hidden" id="35"></td>
+                    <td class="card hidden" id="36"></td>
+                    <td class="card hidden" id="37"></td>
+                    <td class="card hidden" id="38"></td>
+                    <td class="card hidden" id="39"></td>
+                    <td class="card hidden" id="40"></td>
+                </tr>
+                <tr>
+                    <td class="card hidden" id="41"></td>
+                    <td class="card hidden" id="42"></td>
+                    <td class="card hidden" id="43"></td>
+                    <td class="card hidden" id="44"></td>
+                    <td class="card hidden" id="45"></td>
+                    <td class="card hidden" id="46"></td>
+                    <td class="card hidden" id="47"></td>
+                    <td class="card hidden" id="48"></td>
+                </tr>
+              </table>
+        </section>
+    </main>
+
+    <footer>
+        <button id="highscores-btn" class="w3-button w3-black">Hall of Fame</button>
+    </footer>
+ 
+    <!-- Win Game Modal -->
+    <div id="win-modal" class="w3-modal">
+        <div id="win-modal-content" class="w3-modal-content">
+            <div class="w3-container">
+                <span class="w3-button w3-display-topright">&times;</span>
+                <p>Congratulations! You win!</p>
+                <img class="balloon-img" src="images/balloons.png">
+                <p>Enter your name to join the Hall of Fame:</p>
+                <input id="highscore-name" type="text">
+                <button id="high-score-name-btn" class="w3-button w3-black">Enter</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- High Scores Modal -->
+    <div id="highscores-modal" class="w3-modal">
+        <div id="highscores-model-content" class="w3-modal-content">
+            <header class="w3-container">
+                <span onclick="document.getElementById('highscores-modal').style.display='none'"
+                class="w3-button w3-display-topright">&times;</span>
+                <h2>Hall of Fame</h2>
+            </header>
+            <div class="w3-container">
+                <table class="w3-table w3-striped w3-border">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Moves</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="halloffame-tbody">
+                        <tr>
+                            <td>Cliff Duffey</td>
+                            <td>52</td>
+                            <td>00:33:12</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

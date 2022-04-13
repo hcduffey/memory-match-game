@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+body {
+    background-color: #f8f8ff;
+    color: #083D77;
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.playboard-container {
+    background-color:#2E4057;
+    display: flex;
+    width: fit-content;
+    padding: 0.5rem;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px black solid;
+}
+
+.status-container {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3px 0px 3px 0px;
+    border-radius: 2px;
+    border: 1px black solid;
+}
+
+.moves,
+.timer {
+    display: inline-block;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    box-shadow: 1px 2px 2px 0px black;
+    margin: 1rem;
+    background-size: contain;
+}
+
+.hidden {
+    background-color: #083D77;
+}
+
+footer {
+    margin-top: 0.25rem;
+}
+
+/* Modal styles */
+
+#win-modal-content {
+    max-width: 250px;
+}
+
+.w3-container {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.balloon-img {
+    max-width:100px;
+}
+
+#highscores-modal-content {
+    max-width: 500px;
+}
